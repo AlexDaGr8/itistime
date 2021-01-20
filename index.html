@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: rgba(0,0,0,0.8);
+            --color-primary-0: #F267B5;	
+            --color-primary-1: #FDC8E6;
+            --color-primary-2: #F892CC;
+            --color-primary-3: #EA42A1;
+            --color-primary-4: #DE208B;
+
+            --color-secondary-1-0: #62E7D1;	
+            --color-secondary-1-1: #C7FBF2;
+            --color-secondary-1-2: #8EF2E1;
+            --color-secondary-1-3: #3DD8BE;
+            --color-secondary-1-4: #1CC2A6;
+
+            --color-secondary-2-0: #FFEA6C;	
+            --color-secondary-2-1: #FFF7CA;
+            --color-secondary-2-2: #FFF096;
+            --color-secondary-2-3: #FFE548;
+            --color-secondary-2-4: #FFDF25;
+            --text-color-on: var(--color-primary-0);
+            --text-color-body: var(--color-secondary-1-0);
+            --text-color-off: rgba(0,0,0,0.8);
+            --text-shadow-color-on: var(--color-secondary-2-0);
+        }
+        body {
+            font-family: 'Hachi Maru Pop', cursive;
+            background-color: var(--bg-color);
+            color: var(--text-color-body)
+        }
+        .container {
+            display: grid;
+            margin: auto;
+            width: 770px;
+            grid-template-columns: 1fr;
+            gap: 5px;
+            text-align: center;
+        }
+        .column {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 5px;
+        }
+        .column.first {
+            margin-top: 3%;
+        }
+        div.column:first-child {
+            border: solid salmon;
+        }
+        span {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            font-size: 35px;
+            font-weight: bolder;
+            text-align: center;
+            border: 2px solid var(--text-color-off);
+            border-radius: 10px;
+            color: var(--text-color-off);
+            text-shadow: none;
+            box-shadow: inset 0 0 0 0px var(--text-shadow-color-on);
+            transition: all 0.3s ease-in-out;
+        }
+        span.oclock.o::after {
+            content: "'";
+            position: absolute;
+        }
+        span.on {
+            box-shadow: inset 0 0 4px 0px var(--text-shadow-color-on);
+            color: var(--text-color-on);
+            border-color: var(--text-color-on); 
+            text-shadow: -1px 1px 2px var(--text-shadow-color-on);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>"It is" Time baby!</h1>
+        <div id="now">now: </div>
+        <div id="test">test: </div>
+        <div id="fuzzy">it is</div>
+        <div class="column first">
+            <span class="it">I</span>
+            <span class="it">T</span>
+            <span class="random"></span>
+            <span class="is">I</span>
+            <span class="is">S</span>
+            <span class="random"></span>
+            <span class="a-min">A</span>
+            <span class="random"></span>
+            <span class="half-min">H</span>
+            <span class="half-min">A</span>
+            <span class="half-min">L</span>
+            <span class="half-min">F</span>
+        </div>
+        <div class="column">
+            <span class="random"></span>
+            <span class="quarter-min">Q</span>
+            <span class="quarter-min">U</span>
+            <span class="quarter-min">A</span>
+            <span class="quarter-min">R</span>
+            <span class="quarter-min">T</span>
+            <span class="quarter-min">E</span>
+            <span class="quarter-min">R</span>
+            <span class="random"></span>
+            <span class="ten-min">T</span>
+            <span class="ten-min">E</span>
+            <span class="ten-min">N</span>
+        </div>
+        <div class="column">
+            <span class="random"></span>
+            <span class="twenty-min">T</span>
+            <span class="twenty-min">W</span>
+            <span class="twenty-min">E</span>
+            <span class="twenty-min">N</span>
+            <span class="twenty-min">T</span>
+            <span class="twenty-min">Y</span>
+            <span class="five-min">F</span>
+            <span class="five-min">I</span>
+            <span class="five-min">V</span>
+            <span class="five-min">E</span>
+            <span class="random"></span>
+        </div>
+        <div class="column">
+            <span class="random"></span>
+            <span class="random"></span>
+            <span class="past">P</span>
+            <span class="past">A</span>
+            <span class="past">S</span>
+            <span class="past">T</span>
+            <span class="random"></span>
+            <span class="random"></span>
+            <span class="til">T</span>
+            <span class="til">I</span>
+            <span class="til">L</span>
+            <span class="random"></span>
+        </div>
+        <div class="column">
+            <span class="seven">S</span>
+            <span class="seven">E</span>
+            <span class="seven">V</span>
+            <span class="seven">E</span>
+            <span class="seven">N</span>
+            <span class="random"></span>
+            <span class="eleven">E</span>
+            <span class="eleven">L</span>
+            <span class="eleven">E</span>
+            <span class="eleven">V</span>
+            <span class="eleven">E</span>
+            <span class="eleven">N</span>
+        </div>
+        <div class="column">
+            <span class="random"></span>
+            <span class="eight">E</span>
+            <span class="eight">I</span>
+            <span class="eight">G</span>
+            <span class="eight">H</span>
+            <span class="eight">T</span>
+            <span class="random"></span>
+            <span class="three">T</span>
+            <span class="three">H</span>
+            <span class="three">R</span>
+            <span class="three">E</span>
+            <span class="three">E</span>
+        </div>
+        <div class="column">
+            <span class="ten">T</span>
+            <span class="ten">E</span>
+            <span class="ten">N</span>
+            <span class="random"></span>
+            <span class="five">F</span>
+            <span class="five">I</span>
+            <span class="five">V</span>
+            <span class="five">E</span>
+            <span class="random"></span>
+            <span class="one">O</span>
+            <span class="one">N</span>
+            <span class="one">E</span>
+        </div>
+        <div class="column">
+            <span class="six">S</span>
+            <span class="six">I</span>
+            <span class="six">X</span>
+            <span class="random"></span>
+            <span class="two">T</span>
+            <span class="two">W</span>
+            <span class="two">O</span>
+            <span class="random"></span>
+            <span class="four">F</span>
+            <span class="four">O</span>
+            <span class="four">U</span>
+            <span class="four">R</span>
+        </div>
+        <div class="column">
+            <span class="nine">N</span>
+            <span class="nine">I</span>
+            <span class="nine">N</span>
+            <span class="nine">E</span>
+            <span class="random"></span>
+            <span class="random"></span>
+            <span class="oclock o">O</span>
+            <span class="oclock">C</span>
+            <span class="oclock">L</span>
+            <span class="oclock">O</span>
+            <span class="oclock">C</span>
+            <span class="oclock">K</span>
+        </div>
+    </div>
+    <script>
+        let now = document.getElementById('now');
+        let test = document.getElementById('test');
+        let fuzzy = document.getElementById('fuzzy');
+        (function() {
+            let randomAlpha = () => {
+                let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                return chars[Math.floor(Math.random() * chars.length)];
+            };
+            let randoms = document.querySelectorAll('.random');
+            for (let ran of randoms) {
+                ran.innerText = randomAlpha();
+            }
+        })();
+        let nearestFive = (num) => {
+            return Math.round(num/5)*5;
+        }
+        let convertToWords = (num) => {
+            let word = '';
+            switch (num) {
+                case 5: word = 'five'; break;
+                case 10: word = 'ten'; break;
+                case 15: word = 'a quarter'; break;
+                case 20: word = 'twenty'; break;
+                case 25: word = 'twenty five'; break;
+                case 30: word = 'half'; break;
+            }
+            return word;
+        }
+        let convertHours = (hour) => {
+            let h = hour > 12 ? hour - 12 : hour;
+            let word = '';
+            switch (h) {
+                case 1: word = 'one'; break;
+                case 2: word = 'two'; break;
+                case 3: word = 'three'; break;
+                case 4: word = 'four'; break;
+                case 5: word = 'five'; break;
+                case 6: word = 'six'; break;
+                case 7: word = 'seven'; break;
+                case 8: word = 'eight'; break;
+                case 9: word = 'nine'; break;
+                case 10: word = 'ten'; break;
+                case 11: word = 'eleven'; break;
+                case 12: word = 'twelve'; break;
+            }
+            return word;
+        }
+        let classToMultiple = (selector, className, action) => {
+            let getAll = document.querySelectorAll(selector);
+            for (let ga of getAll) {
+                ga.classList[action](className);
+            }
+        }
+        let fuzzyTime = (date) => {
+            classToMultiple(`span`, 'on', 'remove');
+            let hour = date.getHours();
+            let minFive = nearestFive(date.getMinutes());
+            let str = 'it is ';
+            classToMultiple(`.it`, 'on', 'add');
+            classToMultiple(`.is`, 'on', 'add');
+            let tilPast = minFive < 31 ? 'past' : 'til';
+            let hourStr = minFive > 30 ? convertHours(hour + 1) : convertHours(hour)
+            if (minFive === 0 || minFive === 60)  {
+                classToMultiple(`.oclock`, 'on', 'add');
+            } else if (minFive < 31) {
+                classToMultiple(`.${tilPast}`, 'on', 'add');
+                let split = convertToWords(minFive).split(' ');
+                for (let spl of split) {
+                    classToMultiple(`.${spl}-min`, 'on', 'add');
+                }
+            } else {
+                classToMultiple(`.${tilPast}`, 'on', 'add');
+                let split = convertToWords(60 - minFive).split(' ');
+                for (let spl of split) {
+                    classToMultiple(`.${spl}-min`, 'on', 'add');
+                }
+            }
+            classToMultiple(`.${hourStr}`, 'on', 'add');
+            if (minFive === 0 || minFive === 60) {
+                str += `${hourStr} o'clock`;
+            } else if (minFive === 30) {
+                str += `half past ${hourStr}`;
+            } else if (minFive % 15 === 0) {
+                str += `a quarter ${tilPast} ${hourStr}`;
+            } else if (minFive < 30) {
+                str += `${convertToWords(minFive)} ${tilPast} ${hourStr}`;
+            } else {
+                str += `${convertToWords(60 - minFive)} ${tilPast} ${hourStr}`;
+            }
+            return str;
+        }
+        Date.prototype.timeStr = function() {
+            let hours = this.getHours().toString().padStart(2,"0");
+            let minutes = this.getMinutes().toString().padStart(2,"0");
+            let seconds = this.getSeconds().toString().padStart(2,"0");
+            return `${hours}:${minutes}:${seconds}`
+        }
+        let testDate = new Date();
+        setInterval(() => {
+            let date = new Date();
+            testDate.setSeconds(testDate.getSeconds() + 1);
+            now.innerText = 'now: ' + date.timeStr();
+            test.innerText = 'test: ' + testDate.timeStr();
+            fuzzy.innerText = fuzzyTime(testDate);
+        }, 1000);
+    </script>
+</body>
+</html>
